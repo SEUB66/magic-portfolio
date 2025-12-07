@@ -86,6 +86,30 @@ Distributed under the CC BY-NC 4.0 License.
 
 See `LICENSE.txt` for more information.
 
-## Deploy with Vercel
+## Deployment
+
+This project includes automated deployment configuration:
+
+### Vercel (Recommended)
+
+The easiest way to deploy is using Vercel. The repository includes a `vercel.json` configuration file for optimal deployment settings.
+
+**Option 1: One-Click Deploy**
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=%2F%2Fraw.githubusercontent.com%2Fonce-ui-system%2Fmagic-portfolio%2Fmain%2Fpublic%2Fimages%2Fog%2Fhome.jpg)
+
+**Option 2: Manual Deploy**
+
+1. Push your code to GitHub
+2. Import your repository in [Vercel](https://vercel.com/new)
+3. Vercel will automatically detect Next.js and deploy your site
+4. Your site will be live with automatic deployments on every push to main
+
+### Continuous Integration
+
+The repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that automatically:
+- Runs on every push to main and pull requests
+- Installs dependencies
+- Builds the project
+
+This ensures that the project builds successfully before deployment.
